@@ -1,1 +1,3 @@
 test-output
+src/test/resources/logs/
+target/test-classes/logs/
