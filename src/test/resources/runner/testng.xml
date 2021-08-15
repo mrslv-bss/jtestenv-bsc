@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Monobank Testing">
+
   <test name="Order a card">
     <classes>
       <class name="com.w2a.base.TestBase"/>
       <class name="com.w2a.testcases.OrderCard"/>
     </classes>
   </test> <!-- Test -->
+  
+  <test name="Deposite page">
+    <classes>
+      <class name="com.w2a.base.TestBase"/>
+      <class name="com.w2a.testcases.Deposite"/>
+    </classes>    
+  </test> <!-- Test -->  
+ 
 </suite> <!-- Suite -->

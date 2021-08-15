@@ -15,6 +15,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
+import com.w2a.utilities.ExcelReader;
+
 public class TestBase {
 	
 	
@@ -37,6 +39,7 @@ public class TestBase {
 	public static Properties OR = new Properties();
 	public static FileInputStream fis;
 	public static Logger log = Logger.getLogger(TestBase.class.getName());
+	public static ExcelReader excel = new ExcelReader(System.getProperty("user.dir")+"\\src\\test\\resources\\excel\\data4test.xlsx");
 	
 	@BeforeSuite
 	public void setUp()	{
