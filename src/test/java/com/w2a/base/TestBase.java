@@ -39,7 +39,7 @@ public class TestBase {
 	public static Properties OR = new Properties();
 	public static FileInputStream fis;
 	public static Logger log = Logger.getLogger(TestBase.class.getName());
-	public static ExcelReader excel = new ExcelReader(System.getProperty("user.dir")+"\\src\\test\\resources\\excel\\data4test.xlsx");
+	public static ExcelReader excel = new ExcelReader(System.getProperty("user.dir")+"\\src\\test\\resources\\excel\\testdata.xlsx");
 	
 	@BeforeSuite
 	public void setUp()	{
@@ -55,7 +55,7 @@ public class TestBase {
 			}
 			try {
 				config.load(fis);
-				log.info("Confin file loaded.");
+				log.info("Config file loaded.");
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -69,7 +69,7 @@ public class TestBase {
 			}
 			try {
 				OR.load(fis);
-				log.info("Or confin file loaded.");
+				log.info("OR config file loaded.");
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
