@@ -1,6 +1,7 @@
 package com.w2a.testcases;
 
 import org.openqa.selenium.By;
+import org.testng.Reporter;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -10,10 +11,12 @@ public class Deposite extends TestBase {
 
 	@Test (dataProvider="getData")
 	public void makeDeposite(String sum, String monthdep) throws InterruptedException	{
+		System.setProperty("org.uncommons.reportng.escape-output", "false");
 		// Click on month deposite
+		Reporter.log("Go to deposite page!");
 		driver.findElement(By.cssSelector(OR.getProperty("depositeinfo"))).click();
-		
 		// Deposit Replenishment checkbox
+		Reporter.log("<br>Check up month dep checkbox!");
 		driver.findElement(By.cssSelector(OR.getProperty("updep"))).click();
 
 		// When we try remove at the same time all 4 numbers from input, 1 number remains anyway
@@ -24,9 +27,13 @@ public class Deposite extends TestBase {
 		driver.findElement(By.cssSelector(OR.getProperty("depsum"))).sendKeys("\b");
 
 		// Deposite Amount
+		Reporter.log("<br>Dep amount: "+sum);
 		driver.findElement(By.cssSelector(OR.getProperty("depsum"))).sendKeys(sum);
 		// Monthly top up amount
+		Reporter.log("<br>Month dep amount: "+monthdep);
 		driver.findElement(By.cssSelector(OR.getProperty("monthdep"))).sendKeys(monthdep);
+		Reporter.log("<br>Fill inputs sucessfully!");
+		Reporter.log("<br><a target='_blank' href='E:\\Screenshots\\deposite.jpg'><img src='E:\\Screenshots\\deposite.jpg' height=200 width=350></img></a>");
 	}
 	
 	@DataProvider
