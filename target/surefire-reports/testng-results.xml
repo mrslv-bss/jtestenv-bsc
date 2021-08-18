@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[Go to deposite page!]]>
+    </line>
+    <line>
+      <![CDATA[<br>Check up month dep checkbox!]]>
+    </line>
+    <line>
+      <![CDATA[<br>Dep amount: 1200.0]]>
+    </line>
+    <line>
+      <![CDATA[<br>Month dep amount: 200.0]]>
+    </line>
+    <line>
+      <![CDATA[<br>Fill inputs sucessfully!]]>
+    </line>
+  </reporter-output>
+  <suite name="Monobank Testing" duration-ms="2219" started-at="2021-08-18T18:06:54Z" finished-at="2021-08-18T18:06:56Z">
+    <groups>
+    </groups>
+    <test name="Deposite page" duration-ms="2219" started-at="2021-08-18T18:06:54Z" finished-at="2021-08-18T18:06:56Z">
+      <class name="com.w2a.testcases.DepositeTest">
+        <test-method status="PASS" signature="makeDeposite(java.lang.String, java.lang.String)[pri:0, instance:com.w2a.testcases.DepositeTest@17f7cd29]" name="makeDeposite" duration-ms="2181" started-at="2021-08-18T18:06:54Z" data-provider="getData" finished-at="2021-08-18T18:06:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1200.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Go to deposite page!]]>
+            </line>
+            <line>
+              <![CDATA[<br>Check up month dep checkbox!]]>
+            </line>
+            <line>
+              <![CDATA[<br>Dep amount: 1200.0]]>
+            </line>
+            <line>
+              <![CDATA[<br>Month dep amount: 200.0]]>
+            </line>
+            <line>
+              <![CDATA[<br>Fill inputs sucessfully!]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- makeDeposite -->
+      </class> <!-- com.w2a.testcases.DepositeTest -->
+      <class name="com.w2a.base.TestBase">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.w2a.base.TestBase@609cd4d8]" name="setUp" is-config="true" duration-ms="3785" started-at="2021-08-18T18:06:50Z" finished-at="2021-08-18T18:06:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.w2a.base.TestBase@609cd4d8]" name="tearDown" is-config="true" duration-ms="687" started-at="2021-08-18T18:06:56Z" finished-at="2021-08-18T18:06:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.w2a.base.TestBase -->
+    </test> <!-- Deposite page -->
+  </suite> <!-- Monobank Testing -->
+</testng-results>

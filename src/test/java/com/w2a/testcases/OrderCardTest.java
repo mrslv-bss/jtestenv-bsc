@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import com.w2a.base.TestBase;
 
-public class OrderCard extends TestBase {
+public class OrderCardTest extends TestBase {
 
 	@Test
 	public void orderacard() throws InterruptedException	{

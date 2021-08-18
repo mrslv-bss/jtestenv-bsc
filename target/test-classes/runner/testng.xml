@@ -5,12 +5,14 @@
   <listeners>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
     <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <listener class-name="com.w2a.listeners.CustomListeners"/>
+
   </listeners>
 
   <test name="Deposite page">
     <classes>
       <class name="com.w2a.base.TestBase"/>
-      <class name="com.w2a.testcases.Deposite"/>
+      <class name="com.w2a.testcases.DepositeTest"/>
     </classes>    
   </test> <!-- Test -->  
  

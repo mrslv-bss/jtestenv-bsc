@@ -1,13 +1,14 @@
 package com.w2a.testcases;
 
 import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.w2a.base.TestBase;
 
-public class Deposite extends TestBase {
+public class DepositeTest extends TestBase {
 
 	@Test (dataProvider="getData")
 	public void makeDeposite(String sum, String monthdep) throws InterruptedException	{
@@ -33,7 +34,7 @@ public class Deposite extends TestBase {
 		Reporter.log("<br>Month dep amount: "+monthdep);
 		driver.findElement(By.cssSelector(OR.getProperty("monthdep"))).sendKeys(monthdep);
 		Reporter.log("<br>Fill inputs sucessfully!");
-		Reporter.log("<br><a target='_blank' href='E:\\Screenshots\\deposite.jpg'><img src='E:\\Screenshots\\deposite.jpg' height=200 width=350></img></a>");
+		//Assert.fail("Unsucessful login!");
 	}
 	
 	@DataProvider

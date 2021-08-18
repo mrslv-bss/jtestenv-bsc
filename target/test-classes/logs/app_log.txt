@@ -1,0 +1,7 @@
+INFO    2021-08-18 20:59:41,514 [main] com.w2a.base.TestBase  - Config file loaded.
+INFO    2021-08-18 20:59:41,515 [main] com.w2a.base.TestBase  - OR config file loaded.
+INFO    2021-08-18 20:59:43,993 [main] com.w2a.base.TestBase  - Chrome launched.
+INFO    2021-08-18 20:59:45,672 [main] com.w2a.base.TestBase  - Navigated to : https://www.monobank.ua/
+INFO    2021-08-18 20:59:45,841 [main] com.w2a.base.TestBase  - 2
+INFO    2021-08-18 20:59:45,841 [main] com.w2a.base.TestBase  - 2
+INFO    2021-08-18 20:59:48,512 [main] com.w2a.base.TestBase  - Test execution completed.
