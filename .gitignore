@@ -1,2 +1,3 @@
 test-output
 src/test/resources/logs/
+target/surefire-reports/*
