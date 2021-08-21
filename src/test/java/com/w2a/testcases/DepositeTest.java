@@ -27,6 +27,7 @@ public class DepositeTest extends TestBase {
 		driver.findElement(By.cssSelector(OR.getProperty("depsum"))).click();
 		driver.findElement(By.cssSelector(OR.getProperty("depsum"))).sendKeys("\b");
 
+		Assert.fail("Unsucessful login!");
 		// Deposite Amount
 		Reporter.log("<br>Dep amount: "+sum);
 		driver.findElement(By.cssSelector(OR.getProperty("depsum"))).sendKeys(sum);
@@ -34,7 +35,7 @@ public class DepositeTest extends TestBase {
 		Reporter.log("<br>Month dep amount: "+monthdep);
 		driver.findElement(By.cssSelector(OR.getProperty("monthdep"))).sendKeys(monthdep);
 		Reporter.log("<br>Fill inputs sucessfully!");
-		//Assert.fail("Unsucessful login!");
+//		Assert.fail("Unsucessful login!");
 	}
 	
 	@DataProvider
