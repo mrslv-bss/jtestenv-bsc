@@ -2,6 +2,7 @@ package com.w2a.utilities;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -18,7 +19,8 @@ public class TestUtilities extends TestBase {
 		
 		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		
-		screenshotName = "error.jpg";
+		Date d = new Date();
+		screenshotName = d.toString().replace(":","_").replace(" ", "_")+".jpg";
 		
 		FileUtils.copyFile(scrFile, new File(System.getProperty("user.dir")+"\\target\\surefire-reports\\html\\"+screenshotName));
 		
