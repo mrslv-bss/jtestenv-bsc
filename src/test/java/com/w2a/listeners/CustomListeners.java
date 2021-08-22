@@ -7,9 +7,11 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 
+import com.relevantcodes.extentreports.LogStatus;
+import com.w2a.base.TestBase;
 import com.w2a.utilities.TestUtilities;
 
-public class CustomListeners implements ITestListener {
+public class CustomListeners extends TestBase implements ITestListener {
 
 	public void onFinish(ITestContext arg0) {
 		// TODO Auto-generated method stub
@@ -35,10 +37,14 @@ public class CustomListeners implements ITestListener {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		Reporter.log("<br>Test Failed! ");
+		
+		test.log(LogStatus.FAIL, arg0.getName().toUpperCase()+" Failed with exception: "+arg0.getThrowable());
+		test.log(LogStatus.FAIL, test.addScreenCapture(TestUtilities.screenshotName));
+		
 		Reporter.log("Click on the image below to see the full size:");
 		Reporter.log("<br><a target='_blank' href="+TestUtilities.screenshotName+"><img src="+TestUtilities.screenshotName+" height=200 width=350></img></a>");
-		
+		rep.endTest(test);
+		rep.flush();
 	}
 
 	public void onTestSkipped(ITestResult arg0) {
@@ -47,13 +53,16 @@ public class CustomListeners implements ITestListener {
 	}
 
 	public void onTestStart(ITestResult arg0) {
-		// TODO Auto-generated method stub
+		
+		test = rep.startTest(arg0.getName().toUpperCase());
 		
 	}
 
 	public void onTestSuccess(ITestResult arg0) {
-		// TODO Auto-generated method stub
 		
+		test.log(LogStatus.PASS, arg0.getName().toUpperCase()+" PASS");
+		rep.endTest(test);
+		rep.flush();
 	}
 
 }
