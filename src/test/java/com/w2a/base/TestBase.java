@@ -18,6 +18,7 @@ import org.testng.annotations.BeforeSuite;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 import com.w2a.utilities.ExcelReader;
 import com.w2a.utilities.ExtentManager;
 
@@ -102,6 +103,27 @@ public class TestBase {
 			
 		}
 		
+	}
+	
+	public void click(String Locator)	{
+		
+		if (Locator.endsWith("_CSS"))	{
+			driver.findElement(By.cssSelector(OR.getProperty(Locator))).click();
+		} else if (Locator.endsWith("_XPATH"))	{
+			driver.findElement(By.xpath(OR.getProperty(Locator))).click();
+		}
+		test.log(LogStatus.INFO, "Click on: "+Locator);
+
+	}
+	
+	public void sendKeys(String Locator, String Value)	{
+		
+		if (Locator.endsWith("_CSS"))	{
+			driver.findElement(By.cssSelector(OR.getProperty(Locator))).sendKeys(Value);
+		} else if (Locator.endsWith("_XPATH"))	{
+			driver.findElement(By.xpath(OR.getProperty(Locator))).sendKeys(Value);
+		}
+		test.log(LogStatus.INFO, "Typing in: "+Locator+" value as: "+Value);
 	}
 	
 	public boolean isElementPresent(By by)	{

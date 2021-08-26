@@ -21,7 +21,7 @@ public class TestProperties {
 		System.out.println(config.getProperty("browser"));
 		
 		//driver.findElement(By.cssSelector(OR.getProperty("bmlBtn"))).click();
-		System.out.println(OR.getProperty("bmlBtn"));
+		System.out.println(OR.getProperty("bmlBtn_CSS"));
 	}
 
 }
