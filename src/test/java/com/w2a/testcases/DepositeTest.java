@@ -40,6 +40,7 @@ public class DepositeTest extends TestBase {
 		Reporter.log("<br>Month dep amount: "+monthdep);
 		sendKeys("monthdep_CSS", monthdep);
 		Reporter.log("<br>Fill inputs successfully!");
+		driver.close();
 		
 //		Assert.fail("Unsuccessful login!");
 	}
