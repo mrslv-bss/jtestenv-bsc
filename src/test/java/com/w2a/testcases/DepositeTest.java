@@ -7,10 +7,11 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.w2a.base.TestBase;
+import com.w2a.utilities.TestUtilities;
 
 public class DepositeTest extends TestBase {
 
-	@Test (dataProvider="getData")
+	@Test (dataProviderClass=TestUtilities.class,dataProvider="dp")
 	public void makeDeposite(String sum, String monthdep) throws InterruptedException	{
 		System.setProperty("org.uncommons.reportng.escape-output", "false");
 		
@@ -43,23 +44,4 @@ public class DepositeTest extends TestBase {
 //		Assert.fail("Unsuccessful login!");
 	}
 	
-	@DataProvider
-	public Object[][] getData(){
-		
-		String sheetName = "Deposite";
-		int rows = excel.getRowCount(sheetName);
-		int cols = excel.getColumnCount(sheetName);
-		log.info(rows);
-		log.info(cols);
-		Object[][] data = new Object[rows-1][cols];
-		
-		for (int rowNum = 2; rowNum <= rows; rowNum++){
-			for (int colNum = 0; colNum < cols; colNum++){
-				
-				data[rowNum - 2][colNum] = excel.getCellData(sheetName, colNum, rowNum);
-			}
-			
-		}
-		return data;
-	}
 }

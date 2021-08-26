@@ -1,7 +1,6 @@
-INFO    2021-08-26 10:24:49,212 [main] com.w2a.base.TestBase  - Config file loaded.
-INFO    2021-08-26 10:24:49,213 [main] com.w2a.base.TestBase  - OR config file loaded.
-INFO    2021-08-26 10:24:51,424 [main] com.w2a.base.TestBase  - Chrome launched.
-INFO    2021-08-26 10:24:52,926 [main] com.w2a.base.TestBase  - Navigated to : https://www.monobank.ua/
-INFO    2021-08-26 10:24:53,086 [main] com.w2a.base.TestBase  - 2
-INFO    2021-08-26 10:24:53,086 [main] com.w2a.base.TestBase  - 2
-INFO    2021-08-26 10:24:56,240 [main] com.w2a.base.TestBase  - Test execution completed.
+INFO    2021-08-26 17:26:36,272 [main] com.w2a.base.TestBase  - Config file loaded.
+INFO    2021-08-26 17:26:36,274 [main] com.w2a.base.TestBase  - OR config file loaded.
+INFO    2021-08-26 17:26:38,593 [main] com.w2a.base.TestBase  - Chrome launched.
+INFO    2021-08-26 17:26:40,057 [main] com.w2a.base.TestBase  - Navigated to : https://www.monobank.ua/
+INFO    2021-08-26 17:26:40,221 [main] com.w2a.base.TestBase  - 1000
+INFO    2021-08-26 17:26:40,221 [main] com.w2a.base.TestBase  - 2
