@@ -1,5 +1,7 @@
 package com.w2a.testcases;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -12,7 +14,7 @@ import com.w2a.utilities.TestUtilities;
 public class DepositeTest extends TestBase {
 
 	@Test (dataProviderClass=TestUtilities.class,dataProvider="dp")
-	public void makeDeposite(String sum, String monthdep) throws InterruptedException	{
+	public void makeDeposite(String sum, String monthdep) throws InterruptedException, IOException	{
 		System.setProperty("org.uncommons.reportng.escape-output", "false");
 		
 		// Click on month deposite
@@ -23,7 +25,7 @@ public class DepositeTest extends TestBase {
 		Reporter.log("<br>Check up month dep checkbox!");
 		click("updep_CSS");
 
-		
+		verifyEquals("asd","asd");
 		// When we try remove at the same time all 4 numbers from input, 1 number remains anyway
 		// TODO Rebuild to .clear
 		click("depsum_CSS");
@@ -40,9 +42,10 @@ public class DepositeTest extends TestBase {
 		Reporter.log("<br>Month dep amount: "+monthdep);
 		sendKeys("monthdep_CSS", monthdep);
 		Reporter.log("<br>Fill inputs successfully!");
-		driver.close();
 		
+		driver.close();
 //		Assert.fail("Unsuccessful login!");
+
 	}
 	
 }

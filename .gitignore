@@ -1,3 +1,4 @@
 test-output
 src/test/resources/logs/
 target/surefire-reports/*
+target/test-classes/logs/app_log.txt
