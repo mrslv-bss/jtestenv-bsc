@@ -21,5 +21,11 @@
       <class name="com.w2a.testcases.CreditCalcCard"/>
     </classes>    
   </test> <!-- Test -->  
+  
+  <test name="Order a card">
+    <classes>
+      <class name="com.w2a.testcases.OrderCardTest"/>
+    </classes>    
+  </test> <!-- Test -->  
  
 </suite> <!-- Suite -->

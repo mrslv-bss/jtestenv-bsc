@@ -48,4 +48,25 @@ public class TestUtilities extends TestBase {
 		return data;
 	}
 
+	public static boolean isTestRunnable(String testName, ExcelReader excel)	{
+		
+		String sheetname="test_suite";
+		int rows = excel.getRowCount(sheetname);
+		
+		for(int rNum=2; rNum<=rows; rNum++)	{
+			String testCase = excel.getCellData(sheetname, "TCID", rNum);
+			
+			if(testCase.equalsIgnoreCase(testName))	{
+				String runmode = excel.getCellData(sheetname, "Runmode", rNum);
+				if(runmode.equalsIgnoreCase("Y"))
+					return true;
+				else
+					return false;
+			}
+			
+		}
+		return false;
+		
+	}
+	
 }

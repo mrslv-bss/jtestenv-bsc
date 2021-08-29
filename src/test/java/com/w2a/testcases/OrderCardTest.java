@@ -9,7 +9,7 @@ import com.w2a.base.TestBase;
 public class OrderCardTest extends TestBase {
 
 	@Test
-	public void orderacard() throws InterruptedException	{
+	public void orderCardTest() throws InterruptedException	{
 		
 		log.info("Inside Login Test.");
 		driver.findElement(By.cssSelector(OR.getProperty("bmlBtn"))).click();

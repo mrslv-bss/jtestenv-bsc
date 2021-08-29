@@ -6,6 +6,7 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
+import org.testng.SkipException;
 
 import com.relevantcodes.extentreports.LogStatus;
 import com.w2a.base.TestBase;
@@ -55,7 +56,11 @@ public class CustomListeners extends TestBase implements ITestListener {
 	public void onTestStart(ITestResult arg0) {
 		
 		test = rep.startTest(arg0.getName().toUpperCase());
-		
+		//Runmodes - Y
+		if(!TestUtilities.isTestRunnable(arg0.getName(), excel))	{
+			test.log(LogStatus.ERROR, "Skipping the test"+arg0.getName().toUpperCase()+"as the Run mode is NO");
+			throw new SkipException("Skipping the test"+arg0.getName().toUpperCase()+"as the Run mode is NO");
+		}
 	}
 
 	public void onTestSuccess(ITestResult arg0) {

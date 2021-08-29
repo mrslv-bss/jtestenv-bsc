@@ -15,7 +15,7 @@ import com.w2a.utilities.TestUtilities;
 public class DepositeTest extends TestBase {
 
 	@Test (dataProviderClass=TestUtilities.class,dataProvider="dp")
-	public void makeDeposite(String sum, String monthdep) throws InterruptedException, IOException	{
+	public void depositeTest(String sum, String monthdep) throws InterruptedException, IOException	{
 		System.setProperty("org.uncommons.reportng.escape-output", "false");
 		
 		// Click on month deposite
