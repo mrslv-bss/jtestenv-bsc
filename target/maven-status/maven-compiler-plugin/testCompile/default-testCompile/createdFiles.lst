@@ -1,4 +1,5 @@
 com\w2a\testcases\OrderCardTest.class
+com\w2a\testcases\CreditCalcCard.class
 com\w2a\utilities\TestUtilities.class
 com\w2a\utilities\ExtentManager.class
 com\w2a\utilities\ExcelReader.class

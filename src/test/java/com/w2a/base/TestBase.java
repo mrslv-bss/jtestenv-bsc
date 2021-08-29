@@ -11,8 +11,10 @@ import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.AfterSuite;
@@ -109,6 +111,9 @@ public class TestBase {
 		
 	}
 	
+//	*
+//	click('button_CSS')
+//	*
 	public void click(String Locator)	{
 		
 		if (Locator.endsWith("_CSS"))	{
@@ -120,6 +125,9 @@ public class TestBase {
 
 	}
 	
+//	*
+//	sendKeys('input_CSS','Hello')
+//	*
 	public void sendKeys(String Locator, String Value)	{
 		
 		if (Locator.endsWith("_CSS"))	{
@@ -128,6 +136,29 @@ public class TestBase {
 			driver.findElement(By.xpath(OR.getProperty(Locator))).sendKeys(Value);
 		}
 		test.log(LogStatus.INFO, "Typing in: "+Locator+" value as: "+Value);
+	}
+	
+	static WebElement dropdown;
+	
+//	*
+//	select('dropdown_CSS','element')
+//	*
+	public void select(String locator, String value){
+		test.log(LogStatus.INFO, "1");
+		if (locator.endsWith("_CSS"))	{
+			dropdown = driver.findElement(By.cssSelector(OR.getProperty(locator)));
+			test.log(LogStatus.INFO, "2");
+		} else if (locator.endsWith("_XPATH"))	{
+			dropdown = driver.findElement(By.xpath(OR.getProperty(locator)));
+			test.log(LogStatus.INFO, "3");
+		}
+		test.log(LogStatus.INFO, "4");
+		Select tosel = new Select(dropdown);
+		test.log(LogStatus.INFO, "5");
+		tosel.selectByVisibleText(value);
+		
+		test.log(LogStatus.INFO, "Selecting element: "+locator+" value as: "+value);
+		
 	}
 	
 	public boolean isElementPresent(By by)	{
@@ -141,6 +172,9 @@ public class TestBase {
 		
 	}
 	
+//	*
+//	verifyEquals("asd","asd");
+//	*
 	public static void verifyEquals(String expected, String actual) throws IOException {
 
 		try {

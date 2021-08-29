@@ -35,8 +35,7 @@ public class TestUtilities extends TestBase {
 		String sheetName = m.getName();
 		int rows = excel.getRowCount(sheetName);
 		int cols = excel.getColumnCount(sheetName);
-		log.info(rows);
-		log.info(cols);
+
 		Object[][] data = new Object[rows-1][cols];
 		
 		for (int rowNum = 2; rowNum <= rows; rowNum++){

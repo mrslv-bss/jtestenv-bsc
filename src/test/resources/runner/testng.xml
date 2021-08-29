@@ -15,5 +15,11 @@
       <class name="com.w2a.testcases.DepositeTest"/>
     </classes>    
   </test> <!-- Test -->  
+  
+  <test name="Credit Calculator">
+    <classes>
+      <class name="com.w2a.testcases.CreditCalcCard"/>
+    </classes>    
+  </test> <!-- Test -->  
  
 </suite> <!-- Suite -->

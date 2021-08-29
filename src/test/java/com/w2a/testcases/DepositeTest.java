@@ -8,6 +8,7 @@ import org.testng.Reporter;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.relevantcodes.extentreports.LogStatus;
 import com.w2a.base.TestBase;
 import com.w2a.utilities.TestUtilities;
 
@@ -18,32 +19,28 @@ public class DepositeTest extends TestBase {
 		System.setProperty("org.uncommons.reportng.escape-output", "false");
 		
 		// Click on month deposite
-		Reporter.log("Go to deposite page!");
+		test.log(LogStatus.PASS, "Go to deposite page");
 		click("depositeinfo_CSS");
 		
 		// Deposit Replenishment checkbox
-		Reporter.log("<br>Check up month dep checkbox!");
 		click("updep_CSS");
-
-		verifyEquals("asd","asd");
+		
 		// When we try remove at the same time all 4 numbers from input, 1 number remains anyway
 		// TODO Rebuild to .clear
+		test.log(LogStatus.WARNING, "TODO: FIX");
 		click("depsum_CSS");
 		sendKeys("depsum_CSS", "\b\b\b");
 		click("depsum_CSS");
 		sendKeys("depsum_CSS", "\b");
-
+		test.log(LogStatus.WARNING, "When we try remove at the same time all 4 numbers from input, 1 number remains anyway");
 		
 		// Deposite Amount
-		Reporter.log("<br>Dep amount: "+sum);
 		sendKeys("depsum_CSS", sum);
 		
 		// Monthly top up amount
-		Reporter.log("<br>Month dep amount: "+monthdep);
 		sendKeys("monthdep_CSS", monthdep);
-		Reporter.log("<br>Fill inputs successfully!");
 		
-		driver.close();
+//		driver.close();
 //		Assert.fail("Unsuccessful login!");
 
 	}
