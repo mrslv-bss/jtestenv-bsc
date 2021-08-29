@@ -144,17 +144,12 @@ public class TestBase {
 //	select('dropdown_CSS','element')
 //	*
 	public void select(String locator, String value){
-		test.log(LogStatus.INFO, "1");
 		if (locator.endsWith("_CSS"))	{
 			dropdown = driver.findElement(By.cssSelector(OR.getProperty(locator)));
-			test.log(LogStatus.INFO, "2");
 		} else if (locator.endsWith("_XPATH"))	{
 			dropdown = driver.findElement(By.xpath(OR.getProperty(locator)));
-			test.log(LogStatus.INFO, "3");
 		}
-		test.log(LogStatus.INFO, "4");
 		Select tosel = new Select(dropdown);
-		test.log(LogStatus.INFO, "5");
 		tosel.selectByVisibleText(value);
 		
 		test.log(LogStatus.INFO, "Selecting element: "+locator+" value as: "+value);
