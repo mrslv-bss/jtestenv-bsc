@@ -1,5 +1,7 @@
 package com.w2a.testcases;
 
+import java.util.Hashtable;
+
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
@@ -10,7 +12,7 @@ import com.w2a.utilities.TestUtilities;
 public class CreditCalcCard extends TestBase {
 
 	@Test(dataProviderClass=TestUtilities.class,dataProvider="dp")
-	public void creditCalcCard(String tab1, String tab2, String tab3) throws InterruptedException {
+	public void creditCalcCard(Hashtable<String,String> data) throws InterruptedException {
 		
 		test.log(LogStatus.PASS, "Go to main page");
 		click("mono_logo_CSS");
