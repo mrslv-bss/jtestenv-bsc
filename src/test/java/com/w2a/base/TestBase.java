@@ -53,7 +53,7 @@ public class TestBase {
 	public static ExcelReader excel = new ExcelReader(System.getProperty("user.dir")+"\\src\\test\\resources\\excel\\testdata.xlsx");
 	public ExtentReports rep = ExtentManager.getInstance();
 	public static ExtentTest test;
-	
+	public static String browser;
 	
 	@BeforeSuite
 	public void setUp()	{
@@ -88,6 +88,15 @@ public class TestBase {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			
+			if(System.getenv("browser")!=null && !System.getenv("browser").isEmpty())	{
+				
+				browser = System.getenv("browser");
+			}else{
+				browser = config.getProperty("browser");
+			}
+			config.setProperty("browser", browser); 
+			
 			
 			if(config.getProperty("browser").equals("firefox"))	{
 				
