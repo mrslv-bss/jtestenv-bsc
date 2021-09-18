@@ -1,7 +1,12 @@
 com\w2a\utilities\TestConfig.class
-com\w2a\testcases\OrderCardTest.class
-com\w2a\testcases\CreditCalcCard.class
 com\w2a\utilities\TestUtilities.class
+com\w2a\utilities\MonitoringMail.class
+com\w2a\testcases\DepositeTest.class
+com\w2a\base\TestBase.class
+com\w2a\testcases\OrderCardTest.class
+com\w2a\testcases\TestTabs.class
+com\w2a\testcases\CreditCalcCard.class
+com\w2a\testcases\TestDBConn.class
 com\w2a\utilities\MonitoringMail$SMTPAuthenticator.class
 com\w2a\utilities\MonitoringMail$1.class
 com\w2a\utilities\ExtentManager.class
@@ -10,6 +15,4 @@ com\w2a\rough\TestTimeStamp.class
 com\w2a\listeners\CustomListeners.class
 com\w2a\rough\TestProperties.class
 com\w2a\rough\TestHostAdd.class
-com\w2a\utilities\MonitoringMail.class
-com\w2a\testcases\DepositeTest.class
-com\w2a\base\TestBase.class
+com\w2a\testcases\DbManager.class
