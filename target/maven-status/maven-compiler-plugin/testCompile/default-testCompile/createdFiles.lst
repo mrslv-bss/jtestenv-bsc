@@ -3,6 +3,7 @@ com\w2a\utilities\TestUtilities.class
 com\w2a\utilities\MonitoringMail.class
 com\w2a\testcases\DepositeTest.class
 com\w2a\base\TestBase.class
+com\w2a\testcases\NewRelativeLocators.class
 com\w2a\testcases\OrderCardTest.class
 com\w2a\testcases\TestTabs.class
 com\w2a\testcases\CreditCalcCard.class
