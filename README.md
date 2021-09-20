@@ -1,5 +1,5 @@
 # Framework Implementation
-Monobank Test Environment
+Java Test Environment - Basic
 
 # Installation
     1. Install TestNG Framework
